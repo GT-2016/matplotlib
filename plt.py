@@ -1,6 +1,8 @@
 # coding:utf-8
 import matplotlib.pyplot as plt
 from random import choice
+from random import randint
+
 class PlotDraw():
     """draw some plot by matplotlib module"""
     def __init__(self):
@@ -75,3 +77,15 @@ class RandomWalk():
 
             self.x_values.append(next_x)
             self.y_values.append(next_y)
+
+class Die():
+    """表示一个骰子的类"""
+    def __init__(self, num_sides=6):
+        """6个面"""
+        self.num_sides = num_sides
+
+    def roll(self):
+        """随机返回某个面"""
+        return randint(1, self.num_sides)
+
+
